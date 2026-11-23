@@ -1,0 +1,20 @@
+format: jb-book
+root: README
+parts:
+  - caption: From observations to a light curve
+    numbered: true
+    chapters:
+      - file: chapters/reading-a-transit
+      - file: chapters/photometry
+  - caption: Building the model
+    numbered: true
+    chapters:
+      - file: chapters/transit-signal
+      - file: chapters/parameters-and-priors
+      - file: chapters/systematics
+  - caption: Fitting and interpreting observations
+    numbered: true
+    chapters:
+      - file: chapters/fitting
+      - file: chapters/diagnostics
+      - file: chapters/joint-fits

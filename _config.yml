@@ -1,0 +1,6 @@
+title: Modeling Exoplanet Transit Light Curves
+author: ""
+only_build_toc_files: true
+sphinx:
+  config:
+    html_show_copyright: false
