@@ -10,6 +10,7 @@ parts:
     numbered: true
     chapters:
       - file: chapters/transit-signal
+      - file: chapters/transit-geometry
       - file: chapters/parameters-and-priors
       - file: chapters/systematics
   - caption: Fitting and interpreting observations
@@ -18,3 +19,4 @@ parts:
       - file: chapters/fitting
       - file: chapters/diagnostics
       - file: chapters/joint-fits
+      - file: chapters/ecosystem

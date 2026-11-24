@@ -16,24 +16,26 @@ A transit light curve records how much starlight a planet blocks as it crosses i
 3. [Modeling the transit signal](chapters/transit-signal.md) — Build a box model, add ingress and limb darkening, and account for exposure time and contaminating light.
 
    Compare trapezoidal, Mandel–Agol, series-expansion, numerical, and spherical-harmonic models in batman, PyTransit, ellc, starry, and jaxoplanet. Convert between contaminant-to-target flux ratio and contaminant fraction before correcting a depth.
-4. [Choosing parameters and priors](chapters/parameters-and-priors.md) — Choose independent orbital parameters, allow for grazing transits, and incorporate measurements of the host star.
+4. [Orbital and transit geometry](chapters/transit-geometry.md) — Solve Kepler's equation for the mean, eccentric, and true anomalies, orient the orbit and stellar spin with i, ω, Ω, λ, i★, and ψ, then watch impact parameter, limb darkening, eccentricity, and dilution reshape the light curve.
+5. [Choosing parameters and priors](chapters/parameters-and-priors.md) — Choose independent orbital parameters, allow for grazing transits, and incorporate measurements of the host star.
 
    Compare radius and area ratios, impact parameter and inclination, duration and circular density, and quadratic limb-darkening coordinates. Recover eccentricity and periastron angle from their sampled components. Examine grazing and photoeccentric degeneracies, Jeffreys priors, and the stellar-density constraint in allesfitter’s `params.csv` workflow.
-5. [Modeling systematics and noise](chapters/systematics.md) — Use observing conditions and detector measurements to model the baseline. Describe the remaining scatter with independent errors or a time-correlated process.
+6. [Modeling systematics and noise](chapters/systematics.md) — Use observing conditions and detector measurements to model the baseline. Describe the remaining scatter with independent errors or a time-correlated process.
 
    Separate read noise, dark current, atmospheric scintillation, and correlated stellar variability. Use airmass and centroid trends, compare white, pink, and red noise spectra, and choose among pixel-level decorrelation, self-flat-fielding, ensemble trends, and Gaussian processes.
 
 ## Part III. Fitting and interpreting observations
 
-6. [Fitting the light curve](chapters/fitting.md) — Write the likelihood, inspect prior predictions, optimize a fit, and estimate parameter uncertainties with MCMC or nested sampling.
+7. [Fitting the light curve](chapters/fitting.md) — Write the likelihood, inspect prior predictions, optimize a fit, and estimate parameter uncertainties with MCMC or nested sampling.
 
    Select the phase window, inspect flagged data, choose free parameters and external measurements, then check prior draws against the observed cadence. Compare SciPy and JAX optimization, emcee, nested sampling, HMC, NUTS, and variational inference. Locate DiffEvol, JAXopt, Optax, and the integrated fitting frameworks in this workflow.
-7. [Checking and reporting a fit](chapters/diagnostics.md) — Diagnose sampling and residuals, compare prior and posterior predictions, and report fitted and derived quantities.
+8. [Checking and reporting a fit](chapters/diagnostics.md) — Diagnose sampling and residuals, compare prior and posterior predictions, and report fitted and derived quantities.
 
    Use trace and corner plots, prior–posterior overlays, binned residual scatter, and posterior predictive light curves. Compare a fit with published solutions in matching coordinates and propagate uncertainties to derived parameters.
-8. [Combining epochs and passbands](chapters/joint-fits.md) — Fit TESS and ground-based observations together to refine an ephemeris, test for wavelength-dependent depths, or measure transit timing variations.
+9. [Combining epochs and passbands](chapters/joint-fits.md) — Fit TESS and ground-based observations together to refine an ephemeris, test for wavelength-dependent depths, or measure transit timing variations.
 
    Use short exposures to resolve ingress and widely separated epochs to constrain period. Fit per-filter radius ratios, propagate shape uncertainty into partial-transit times, and evaluate observed-minus-calculated timing residuals against a linear ephemeris.
+10. [The modeling ecosystem](chapters/ecosystem.md) — Map array backends, transit models, optimizers, samplers, GP and neural-network libraries, and integrated frameworks, and see which combinations support gradient-based inference.
 
 ## Build the book locally
 
